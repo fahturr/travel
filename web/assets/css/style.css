@@ -1,0 +1,146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 10, 2019, 4:54:27 PM
+    Author     : fatur
+*/
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+/*Header styling*/
+
+.navigation {
+    margin: 4% 0 4% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.one, .two, .three {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.07);
+    color: #E1CC6C;
+    display: inherit;
+    border: 1.3px solid #E1CC6C;
+    width: 100%;
+    height: 5vh;
+    background: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.butt.active {
+    background: #E1CC6C !important;
+    color: white !important;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+
+}
+
+.butt:active {
+    background: #E1CC6C !important;
+    color: white !important;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+
+}
+
+.one:hover , .two:hover, .three:hover{
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+
+.one {
+    border-radius: 6px 0 0 6px; 
+}
+
+
+.two {
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.three {
+    border-radius: 0 6px 6px 0;
+}
+
+.nav-logo {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    align-self: center;
+}
+
+/*End of header styling*/
+
+
+/*Body Styling*/
+
+.content {
+    width: 100%;
+    height: 69vh;
+    border-radius: 6px;
+    border: 1.3px solid #E1CC6C;
+    padding: 15px 30px 15px 30px;
+}
+
+.ticket {
+    width: 100%;
+    height: 15vh;
+    margin-top: 15px; 
+    border: 1.3px solid #43a047;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+}
+
+.ticket:hover, .ticket.active {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.ticket span {
+    color: #43a047;
+    font-weight: bold;
+}
+
+.ticketsss {
+    overflow-x: auto;
+    width: 100%;
+    height: 42vh;
+    padding: 10px;
+    border: .1px solid #E1CC6C;
+}
+
+/*End of header styling*/
+
+
+
+/*Scroll bar customize*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
