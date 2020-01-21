@@ -11,7 +11,7 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="TravelTicket" method="post">
+            <form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="HomeTravel?action=login" method="post">
                 <span class="login100-form-title">
                     Login
                 </span>
@@ -34,8 +34,15 @@
                     <span class="txt1 p-b-9">
                         Don't have any account ?
                     </span>
-                    <a href="signup.jsp" class="txt3">
-                        Create account ?
+                    <a href="HomeTravel?page=signup" class="txt3">
+                        Create account
+                    </a>
+                    <br>
+                    <span class="txt1 p-b-9">
+                        Have a Travel Company ?
+                    </span>
+                    <a href="TravelAdmin" class="txt3">
+                        Create Here
                     </a>
                 </div>
             </form>

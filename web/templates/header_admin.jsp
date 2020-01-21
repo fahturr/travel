@@ -4,7 +4,7 @@
     Author     : fatur
 --%>
 
-<%@page import="com.travelticket.dbutill.User"%>
+<%@page import="com.travelticket.dbutill.Perusahaan"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,27 +34,27 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% User user = (User) session.getAttribute("loginData"); %>
+        <% Perusahaan perusahaan = (Perusahaan) session.getAttribute("loginData"); %>
         <div class="navbar-fixed">
             <nav class="green darken-1">
                 <div class="nav-wrapper container">
                     <a href="" class="brand-logo">
                         <i class="material-icons" style="font-size: 4rem !important">directions_car</i>
-                        
+
                         <span class="nav-logo">
-                            KATAPANG
+                            KATAPANG (Admin)
                         </span>
                     </a>
                     <ul class="right hide-on-med-and-down">
-                        <%if (user == null) { %>
+                        <%if (perusahaan == null) { %>
                         <li>
                             <a class="btn transparent" href="HomeTravel">LOGIN</a>
                         </li>
                         <li>
                             <a class="btn white green-text" href="HomeTravel?page=signup">Sign Up</a>
                         </li>
-                        <% } else { %>
-                        <a class='dropdown-trigger btn white green-text' href='#' data-target='dropdown1'><%= user.getNameUser() %></a>
+                        <% } else {%>
+                        <a class='dropdown-trigger btn white green-text' href='#' data-target='dropdown1'><%= perusahaan.getNamaPerusahaan()%></a>
 
                         <!-- Dropdown Structure -->
                         <ul id='dropdown1' class='dropdown-content'>
@@ -64,18 +64,5 @@
                     </ul>
                 </div>
             </nav>
-        </div>
-        <div class="container">
-            <div class="navigation" id="navigation">
-                <a class="one butt" href="TravelTicket" >
-                    Order
-                </a>
-                <a class="two butt" href="PaymentTicket">
-                    Payment
-                </a>
-                <a class="three butt" href="MyTicket">
-                    My Ticket
-                </a>
-            </div>
         </div>
 

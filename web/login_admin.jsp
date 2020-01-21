@@ -1,6 +1,6 @@
 <%-- 
-    Document   : signup
-    Created on : Nov 10, 2019, 9:43:56 PM
+    Document   : login
+    Created on : Nov 10, 2019, 9:32:15 PM
     Author     : fatur
 --%>
 
@@ -11,18 +11,10 @@
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
-            <form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="HomeTravel?action=register" method="post">
+            <form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="TravelAdmin?action=login" method="post">
                 <span class="login100-form-title">
-                    Sign Up
+                    Login (Admin)
                 </span>
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter Name">
-                    <input class="input100" type="text" name="name" placeholder="Name">
-                    <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter Email">
-                    <input class="input100" type="text" name="email" placeholder="Email">
-                    <span class="focus-input100"></span>
-                </div>
                 <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
                     <input class="input100" type="text" name="username" placeholder="Username">
                     <span class="focus-input100"></span>
@@ -33,17 +25,24 @@
                 </div>
                 <div class="text-right p-t-13 p-b-23"></div>
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn" type="submit">
-                        Sign Up
+                    <button class="login100-form-btn">
+                        Login
                     </button>
                 </div>
                 <br/>
                 <div class="flex-col-c p-t-170 p-b-40">
                     <span class="txt1 p-b-9">
-                        Already have an account ?
+                        Don't have any account ?
+                    </span>
+                    <a href="TravelAdmin?page=signup" class="txt3">
+                        Create account
+                    </a>
+                    <br>
+                    <span class="txt1 p-b-9">
+                        Want to buy Ticket ?
                     </span>
                     <a href="HomeTravel" class="txt3">
-                        Login
+                        Create Here
                     </a>
                 </div>
             </form>
@@ -52,4 +51,3 @@
 </div>
 
 <%@include file="templates/footer_home.jsp" %>
-

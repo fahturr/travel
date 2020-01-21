@@ -14,7 +14,7 @@
     <div class="content">
         <div class="row">
             <form>
-                <div class="col m3">
+                <div class="col m4 offset-m2">
                     <div class="input-field">
                         <select>
                             <option value="All" selected>All</option>
@@ -27,55 +27,24 @@
                         </select>
                         <label>Destination</label>
                     </div>
+                </div>
+                <div class="col m4 offset-m1">
+                    <label>Date</label>
                     <input type="text" class="datepicker" id="date">
                 </div>
-<!--                <div class="col m3 offset-m6">
-                    <label for="">Seat</label>
-                    <div class="seats" id="seat">
-                        <center>
-                            <div class="row">
-                                <div class="col m12">
-                                    <label>
-                                        <input type="checkbox" class="filled-in" disabled="disabled"/>
-                                        <span></span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="filled-in" name="seat"/>
-                                        <span></span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="filled-in" name="seat"/>
-                                        <span></span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="filled-in" name="seat"/>
-                                        <span></span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="filled-in" name="seat"/>
-                                        <span></span>
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="filled-in" name="seat"/>
-                                        <span></span>
-                                    </label>
-                                </div>
-                            </div>
-                        </center>
-                    </div>
-                </div>-->
             </form>
         </div>
         <div class="ticketsss">
             <div class="row">
                 <div class="col m12" id="tickets">
                     <% for (int i = 0; i < tickets.size(); i++) {%>
-                    <form class="ticket"action="TravelTicket?action=buy&id=<%= tickets.get(i).getIdTicket()%>" method="post">
+                    <form class="ticket" action="TravelTicket" method="post">
+                        <input type="hidden" name="id_ticket" value="<%= tickets.get(i).getIdTicket()%>" />
                         <span><%= tickets.get(i).getPerusahaan().getNamaPerusahaan()%></span>
                         <span><%= tickets.get(i).getTanggal()%></span>
                         <span><%= tickets.get(i).getWaktu()%></span>
                         <span><%= tickets.get(i).getTujuan()%></span>
-                        <span><%= tickets.get(i).getHarga()%></span>
+                        <span><%= TicketDbUtill.formatHarga(Integer.parseInt(tickets.get(i).getHarga()))%></span>
                         <div class="seats" id="seat">
                             <center>
                                 <div class="row">
@@ -85,30 +54,54 @@
                                             <span></span>
                                         </label>
                                         <label>
-                                            <input type="checkbox" class="filled-in" name="seat"/>
+                                            <% if (tickets.get(i).getKursiSatu().equals("0")) { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="1"/>
+                                            <% } else { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="1" checked="checked" disabled="disabled"/>
+                                            <% } %>
                                             <span></span>
                                         </label>
                                         <label>
-                                            <input type="checkbox" class="filled-in" name="seat"/>
+                                            <% if (tickets.get(i).getKursiDua().equals("0")) { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="2"/>
+                                            <% } else { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="2" checked="checked" disabled="disabled"/>
+                                            <% } %>
                                             <span></span>
                                         </label>
                                         <label>
-                                            <input type="checkbox" class="filled-in" name="seat"/>
+                                            <% if (tickets.get(i).getKursiTiga().equals("0")) { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="3"/>
+                                            <% } else { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="3" checked="checked" disabled="disabled"/>
+                                            <% } %>
                                             <span></span>
                                         </label>
                                         <label>
-                                            <input type="checkbox" class="filled-in" name="seat"/>
+                                            <% if (tickets.get(i).getKursiEmpat().equals("0")) { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="4"/>
+                                            <% } else { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="4" checked="checked" disabled="disabled"/>
+                                            <% } %>
                                             <span></span>
                                         </label>
                                         <label>
-                                            <input type="checkbox" class="filled-in" name="seat"/>
+                                            <% if (tickets.get(i).getKursiLima().equals("0")) { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="5"/>
+                                            <% } else { %>
+                                            <input type="checkbox" class="filled-in" name="seat" value="5" checked="checked" disabled="disabled"/>
+                                            <% } %>
                                             <span></span>
                                         </label>
                                     </div>
                                 </div>
                             </center>
                         </div>
-                        <a class="btn green darken-1">Buy</a>
+                        <% if (user != null) {%>
+                        <button class="btn green darken-1" type="submit">Buy</button>
+                        <% } else { %>
+                        <button class="btn green darken-1" type="submit" disabled="disabled">Buy</button>
+                        <% } %>
                     </form>
                     <%}%>
                 </div>

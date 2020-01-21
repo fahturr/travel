@@ -4,9 +4,49 @@
         <servlet-name>TravelTicket</servlet-name>
         <servlet-class>com.travelticket.TravelTicket</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MyTicket</servlet-name>
+        <servlet-class>com.travelticket.MyTicket</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HomeTravel</servlet-name>
+        <servlet-class>com.travelticket.HomeTravel</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PaymentTicket</servlet-name>
+        <servlet-class>com.travelticket.PaymentTicket</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TravelAdmin</servlet-name>
+        <servlet-class>com.travelticket.TravelAdmin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>com.travelticket.Admin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TravelTicket</servlet-name>
         <url-pattern>/TravelTicket</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MyTicket</servlet-name>
+        <url-pattern>/MyTicket</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomeTravel</servlet-name>
+        <url-pattern>/HomeTravel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PaymentTicket</servlet-name>
+        <url-pattern>/PaymentTicket</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TravelAdmin</servlet-name>
+        <url-pattern>/TravelAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/Admin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

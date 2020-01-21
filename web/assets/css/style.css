@@ -15,6 +15,7 @@ html {
 body{
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
 /*Header styling*/
@@ -44,14 +45,12 @@ body{
     background: #E1CC6C !important;
     color: white !important;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
-
 }
 
 .butt:active {
     background: #E1CC6C !important;
     color: white !important;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
-
 }
 
 .one:hover , .two:hover, .three:hover{
@@ -120,9 +119,24 @@ body{
     border: .1px solid #E1CC6C;
 }
 
+.seats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9vw;
+    height: 11vh;
+    border: 1px solid #E1CC6C;
+    padding: 35px 6px 6px 17px;
+}
+
+.seat {
+    display: inline-block;
+    width: 2vw;
+    height: 2vw;
+    border: 1px solid black;
+}
+
 /*End of header styling*/
-
-
 
 /*Scroll bar customize*/
 /* width */
